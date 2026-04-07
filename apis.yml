@@ -1,7 +1,11 @@
 aid: airgas
-url: https://raw.githubusercontent.com/api-evangelist/airgas/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/airgas/refs/heads/main/apis.yml
 modified: '2026-03-23'
 apis: []
 common:
   - type: Website
     url: https://www.airgas.com
+description: >-
+  Distributor of industrial, medical and specialty gases as well as a product line
+  of safety products, welding equipment, specialty tools, and MRO products.
