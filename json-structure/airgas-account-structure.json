@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/airgas/refs/heads/main/json-structure/airgas-account-structure.json",
+  "name": "Account",
+  "description": "An Airgas B2B customer account.",
+  "type": "object",
+  "properties": {
+    "account_number": {
+      "type": "string",
+      "description": "Unique Airgas account number.",
+      "example": "ACCT-789012"
+    },
+    "company_name": {
+      "type": "string",
+      "description": "Business name for the account.",
+      "example": "Precision Metal Works Inc."
+    },
+    "account_type": {
+      "type": "string",
+      "enum": [
+        "industrial",
+        "medical",
+        "food",
+        "retail",
+        "government"
+      ],
+      "description": "Type of customer account.",
+      "example": "industrial"
+    },
+    "primary_contact": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Jane Smith"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "example": "jane.smith@example.com"
+        },
+        "phone": {
+          "type": "string",
+          "example": "+1-713-555-0100"
+        }
+      }
+    },
+    "billing_address": {
+      "type": "object",
+      "properties": {
+        "street": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "zip": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        }
+      }
+    },
+    "credit_limit": {
+      "type": "double",
+      "description": "Account credit limit in USD.",
+      "example": 50000.0
+    },
+    "payment_terms": {
+      "type": "string",
+      "description": "Payment terms for the account.",
+      "example": "NET30"
+    },
+    "is_active": {
+      "type": "boolean",
+      "description": "Whether the account is active.",
+      "example": true
+    }
+  },
+  "required": [
+    "account_number",
+    "company_name",
+    "account_type"
+  ]
+}

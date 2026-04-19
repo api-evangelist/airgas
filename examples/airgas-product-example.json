@@ -1,0 +1,12 @@
+{
+  "product_number": "OXUS300",
+  "name": "Oxygen, Industrial Grade, 300 CF",
+  "description": "Industrial grade oxygen in a 300 cubic foot cylinder.",
+  "category": "gas",
+  "gas_type": "Oxygen",
+  "grade": "industrial",
+  "cylinder_size": "T-300",
+  "unit_of_measure": "Each",
+  "price": 125.99,
+  "available": true
+}

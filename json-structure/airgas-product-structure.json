@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/airgas/refs/heads/main/json-structure/airgas-product-structure.json",
+  "name": "Product",
+  "description": "An Airgas product including gases, welding equipment, and safety supplies.",
+  "type": "object",
+  "properties": {
+    "product_number": {
+      "type": "string",
+      "description": "Airgas product number / SKU.",
+      "example": "OXUS300"
+    },
+    "name": {
+      "type": "string",
+      "description": "Product name.",
+      "example": "Oxygen, Industrial Grade, 300 CF"
+    },
+    "description": {
+      "type": "string",
+      "description": "Product description.",
+      "example": "Industrial grade oxygen in a 300 cubic foot cylinder."
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "gas",
+        "welding",
+        "safety",
+        "tool",
+        "mro"
+      ],
+      "description": "Product category.",
+      "example": "gas"
+    },
+    "gas_type": {
+      "type": "string",
+      "description": "Type of gas (for gas products).",
+      "example": "Oxygen"
+    },
+    "grade": {
+      "type": "string",
+      "enum": [
+        "industrial",
+        "medical",
+        "food",
+        "specialty",
+        "research"
+      ],
+      "description": "Gas purity grade.",
+      "example": "industrial"
+    },
+    "cylinder_size": {
+      "type": "string",
+      "description": "Cylinder size designation.",
+      "example": "T-300"
+    },
+    "unit_of_measure": {
+      "type": "string",
+      "description": "Unit of measure for ordering.",
+      "example": "Each"
+    },
+    "price": {
+      "type": "double",
+      "description": "List price per unit.",
+      "example": 125.99
+    },
+    "available": {
+      "type": "boolean",
+      "description": "Whether the product is available for order.",
+      "example": true
+    }
+  },
+  "required": [
+    "product_number",
+    "name",
+    "category"
+  ]
+}

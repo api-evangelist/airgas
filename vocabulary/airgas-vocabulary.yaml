@@ -1,0 +1,136 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: "Airgas"
+  description: "Domain vocabulary for Airgas B2B industrial gas, welding, and safety supply operations. Covers product catalog, ordering, account management, and supply chain concepts."
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - name: Airgas B2B Platform
+      namespace: airgas
+      version: "1.0.0"
+      baseUrl: https://www.airgas.com
+      status: active
+      description: "Airgas online ordering and account management platform."
+
+  resources:
+    - name: products
+      description: "Industrial gases, welding equipment, safety supplies, and MRO products."
+      actions: [list, search, get]
+    - name: orders
+      description: "B2B customer orders for products."
+      actions: [list, create, get, cancel]
+    - name: accounts
+      description: "Customer business accounts with credit and contact information."
+      actions: [get, update]
+    - name: deliveries
+      description: "Delivery schedules and proof-of-delivery records."
+      actions: [list, get]
+    - name: invoices
+      description: "Customer invoices and billing records."
+      actions: [list, get]
+
+  actions:
+    - name: list
+      methods: [GET]
+      pattern: read
+    - name: search
+      methods: [GET, POST]
+      pattern: read
+    - name: get
+      methods: [GET]
+      pattern: read
+    - name: create
+      methods: [POST]
+      pattern: write
+    - name: update
+      methods: [PUT, PATCH]
+      pattern: write
+    - name: cancel
+      methods: [POST, DELETE]
+      pattern: write
+
+  schemas:
+    core:
+      - name: Product
+        description: "Gas, welding, or safety product."
+      - name: Order
+        description: "B2B customer order."
+      - name: Account
+        description: "B2B customer account."
+
+  enums:
+    product_category:
+      - gas
+      - welding
+      - safety
+      - tool
+      - mro
+    gas_grade:
+      - industrial
+      - medical
+      - food
+      - specialty
+      - research
+    order_status:
+      - pending
+      - confirmed
+      - processing
+      - shipped
+      - delivered
+      - cancelled
+    account_type:
+      - industrial
+      - medical
+      - food
+      - retail
+      - government
+
+  authentication:
+    schemes:
+      - type: session
+        description: "Session-based authentication via Airgas.com login."
+        apis: [airgas]
+
+capability:
+  workflows: []
+  personas:
+    - id: procurement-manager
+      name: Procurement Manager
+      description: "Manages industrial gas and supply purchases for manufacturing or healthcare operations."
+    - id: facility-manager
+      name: Facility Manager
+      description: "Oversees gas supply, safety equipment, and welding supplies for a facility."
+    - id: accounts-payable
+      name: Accounts Payable
+      description: "Manages Airgas invoices, billing, and payment terms."
+
+  domains:
+    - name: Gas Supply
+      description: "Industrial, medical, and specialty gas products and cylinders."
+      resources: [products]
+    - name: Order Management
+      description: "B2B ordering, tracking, and delivery."
+      resources: [orders, deliveries]
+    - name: Account Management
+      description: "Customer accounts, credit, and billing."
+      resources: [accounts, invoices]
+
+  namespaces: []
+  binds: []
+
+crossReference:
+  - resource: products
+    operations: [search products, get product details]
+    personas: [Procurement Manager, Facility Manager]
+  - resource: orders
+    operations: [create order, track order, cancel order]
+    personas: [Procurement Manager]
+  - resource: accounts
+    operations: [view account, update contact]
+    personas: [Procurement Manager, Accounts Payable]
+  - resource: invoices
+    operations: [list invoices, get invoice]
+    personas: [Accounts Payable]

@@ -1,0 +1,20 @@
+{
+  "account_number": "ACCT-789012",
+  "company_name": "Precision Metal Works Inc.",
+  "account_type": "industrial",
+  "primary_contact": {
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "phone": "+1-713-555-0100"
+  },
+  "billing_address": {
+    "street": "123 Industrial Blvd",
+    "city": "Houston",
+    "state": "TX",
+    "zip": "77001",
+    "country": "US"
+  },
+  "credit_limit": 50000.0,
+  "payment_terms": "NET30",
+  "is_active": true
+}

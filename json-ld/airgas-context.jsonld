@@ -1,0 +1,77 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "airgas": "https://airgas.com/schema/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Product": "airgas:Product",
+    "Order": "airgas:Order",
+    "Account": "airgas:Account",
+    "name": "schema:name",
+    "description": "schema:description",
+    "productNumber": {
+      "@id": "airgas:product_number",
+      "@type": "xsd:string"
+    },
+    "category": {
+      "@id": "airgas:category",
+      "@type": "xsd:string"
+    },
+    "gasType": {
+      "@id": "airgas:gas_type",
+      "@type": "xsd:string"
+    },
+    "grade": {
+      "@id": "airgas:grade",
+      "@type": "xsd:string"
+    },
+    "price": {
+      "@id": "schema:price",
+      "@type": "xsd:decimal"
+    },
+    "orderNumber": {
+      "@id": "airgas:order_number",
+      "@type": "xsd:string"
+    },
+    "accountNumber": {
+      "@id": "airgas:account_number",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "airgas:status",
+      "@type": "xsd:string"
+    },
+    "orderDate": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "deliveryDate": {
+      "@id": "schema:deliveryLeadTime",
+      "@type": "xsd:date"
+    },
+    "totalAmount": {
+      "@id": "schema:totalPrice",
+      "@type": "xsd:decimal"
+    },
+    "companyName": {
+      "@id": "schema:legalName",
+      "@type": "xsd:string"
+    },
+    "accountType": {
+      "@id": "airgas:account_type",
+      "@type": "xsd:string"
+    },
+    "creditLimit": {
+      "@id": "airgas:credit_limit",
+      "@type": "xsd:decimal"
+    },
+    "paymentTerms": {
+      "@id": "airgas:payment_terms",
+      "@type": "xsd:string"
+    },
+    "isActive": {
+      "@id": "airgas:is_active",
+      "@type": "xsd:boolean"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/airgas/refs/heads/main/json-structure/airgas-order-structure.json",
+  "name": "Order",
+  "description": "An Airgas B2B customer order for industrial gases, welding, or safety products.",
+  "type": "object",
+  "properties": {
+    "order_number": {
+      "type": "string",
+      "description": "Unique order number.",
+      "example": "AG-2026-00123456"
+    },
+    "account_number": {
+      "type": "string",
+      "description": "Customer account number.",
+      "example": "ACCT-789012"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "processing",
+        "shipped",
+        "delivered",
+        "cancelled"
+      ],
+      "description": "Current order status.",
+      "example": "confirmed"
+    },
+    "order_date": {
+      "type": "datetime",
+      "description": "Date and time the order was placed.",
+      "example": "2026-04-19T10:30:00Z"
+    },
+    "delivery_date": {
+      "type": "date",
+      "description": "Scheduled or actual delivery date.",
+      "example": "2026-04-22"
+    },
+    "purchase_order": {
+      "type": "string",
+      "description": "Customer purchase order number.",
+      "example": "PO-20260419-001"
+    },
+    "delivery_address": {
+      "type": "object",
+      "description": "Delivery address for the order.",
+      "properties": {
+        "street": {
+          "type": "string",
+          "example": "123 Industrial Blvd"
+        },
+        "city": {
+          "type": "string",
+          "example": "Houston"
+        },
+        "state": {
+          "type": "string",
+          "example": "TX"
+        },
+        "zip": {
+          "type": "string",
+          "example": "77001"
+        },
+        "country": {
+          "type": "string",
+          "example": "US"
+        }
+      }
+    },
+    "line_items": {
+      "type": "array",
+      "description": "Products included in the order.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_number": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "int32"
+          },
+          "unit_price": {
+            "type": "double"
+          }
+        }
+      }
+    },
+    "total_amount": {
+      "type": "double",
+      "description": "Total order amount.",
+      "example": 523.75
+    }
+  },
+  "required": [
+    "order_number",
+    "account_number",
+    "status"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "order_number": "AG-2026-00123456",
+  "account_number": "ACCT-789012",
+  "status": "confirmed",
+  "order_date": "2026-04-19T10:30:00Z",
+  "delivery_date": "2026-04-22",
+  "purchase_order": "PO-20260419-001",
+  "delivery_address": {
+    "street": "123 Industrial Blvd",
+    "city": "Houston",
+    "state": "TX",
+    "zip": "77001",
+    "country": "US"
+  },
+  "line_items": [
+    {
+      "product_number": "OXUS300",
+      "quantity": 2,
+      "unit_price": 125.99
+    }
+  ],
+  "total_amount": 523.75
+}
