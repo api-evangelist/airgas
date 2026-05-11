@@ -78,6 +78,8 @@ common:
 - url: https://raw.githubusercontent.com/api-evangelist/airgas/refs/heads/main/vocabulary/airgas-vocabulary.yaml
   type: Vocabulary
   title: Airgas Vocabulary
+- type: Integrations
+  url: https://www.airgas.com/marketplace
 description: >-
   Airgas is a leading supplier of industrial, medical, and specialty gases as well as welding equipment, safety products, and MRO supplies. An Air Liquide company, Airgas serves aerospace, construction,
   food and beverage, healthcare, metal fabrication, and energy industries. Airgas provides B2B e-business solutions including online ordering, supply chain management, and digital proof-of-delivery capabilities.
@@ -96,6 +98,8 @@ type: Index
 position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+integrations:
+  - name: 'Airgas: an Air Liquide Company'
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
