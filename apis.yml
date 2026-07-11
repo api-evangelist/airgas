@@ -23,6 +23,8 @@ apis:
   - url: https://www.airgas.com/order-and-shipping
     type: GettingStarted
 common:
+- type: DomainSecurity
+  url: security/airgas-domain-security.yml
 - url: https://www.airgas.com
   type: Portal
 - url: https://www.airgas.com/solutions
