@@ -1,0 +1,73 @@
+specification: API Commons Well-Known
+specificationVersion: '0.1'
+provider: Airgas
+providerId: airgas
+generated: '2026-08-30'
+method: probed
+source: >-
+  Direct unauthenticated HTTP probes of every host named in apis.yml (www.airgas.com) plus the only
+  other Airgas host that resolves in DNS (b2b.airgas.com). One attempt per URL, browser User-Agent.
+note: >-
+  NO /.well-known/ document is served on any Airgas host. www.airgas.com answers every /.well-known/
+  path with its real 404 template (HTTP 404, text/html, "Page Not Found | Airgas"); b2b.airgas.com is a
+  bare edge host that answers HTTP 404 text/plain to every path including its own root. Recorded as an
+  absence — no WellKnown or SecurityTxt pointer is wired into apis.yml, because nothing was served.
+  api.airgas.com, developer.airgas.com, developers.airgas.com, apis.airgas.com, punchout.airgas.com,
+  ebusiness.airgas.com, status.airgas.com, trust.airgas.com and security.airgas.com are all NXDOMAIN.
+hosts:
+  - host: www.airgas.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+      - path: /.well-known/dnt-policy.txt
+        status: 404
+        file: null
+  - host: b2b.airgas.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+control:
+  - path: /robots.txt
+    host: www.airgas.com
+    status: 200
+    note: >-
+      Control probe proving the host serves real files and the 404s above are genuine absences,
+      not an edge policy blocking our crawler.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

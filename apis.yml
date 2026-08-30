@@ -23,7 +23,7 @@ accessModel:
   - plans
   generated: '2026-07-22'
   method: derived
-modified: '2026-04-19'
+modified: '2026-08-30'
 apis:
 - aid: airgas:airgas
   name: Airgas
@@ -39,23 +39,39 @@ apis:
   description: Airgas provides industrial, medical, and specialty gases and related products. The Airgas online platform supports B2B ordering, account management, order tracking, digital proof of 
     delivery, and supply chain management for business customers.
   properties:
-  - url: https://www.airgas.com
+  - url: https://www.airgas.com/solutions/ebusiness-solutions
     type: Documentation
   - url: https://www.airgas.com/solutions
     type: GettingStarted
-  - url: https://www.airgas.com/order-and-shipping
-    type: GettingStarted
+  - url: https://www.airgas.com/solutions/ebusiness-solutions/contact-us
+    type: Support
 common:
+- type: Website
+  url: https://www.airgas.com/
 - type: DomainSecurity
   url: security/airgas-domain-security.yml
 - url: https://www.airgas.com
   type: Portal
 - url: https://www.airgas.com/solutions
   type: GettingStarted
-- url: https://www.airgas.com/about
+- url: https://www.airgas.com/company
   type: About
-- url: https://www.airgas.com/contact
+- url: https://www.airgas.com/customer-service
   type: Support
+- url: https://www.airgas.com/privacy
+  type: PrivacyPolicy
+- url: https://www.airgas.com/terms
+  type: TermsOfService
+- url: https://www.airgas.com/airgas_newsroom
+  type: Blog
+- url: https://www.airgas.com/login
+  type: Login
+- url: https://www.airgas.com/resources
+  type: Documentation
+- type: Conformance
+  url: conformance/airgas-conformance.yml
+- type: LLMsTxt
+  url: llms/airgas-llms.txt
 - url: https://www.airgas.com/careers
   type: Jobs
 - url: https://www.linkedin.com/company/airgas
@@ -129,3 +145,26 @@ integrations:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-30'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    Airgas markets machine-to-machine integration — cXML/OCI punchout, hosted catalogs, and EDI order,
+    ASN and invoice documents — on its eBusiness Solutions page, but publishes no endpoint, no supplier
+    setup document and no contract; the page's only next step is the Airgas SupplySync contact form that
+    hands you to the eBusiness Solutions team.
+  evidence:
+    - url: https://www.airgas.com/solutions/ebusiness-solutions
+      status: 200
+    - url: https://www.airgas.com/solutions/ebusiness-solutions/contact-us
+      status: 200
+    - url: https://www.airgas.com/openapi.json
+      status: 404
+    - url: https://www.airgas.com/.well-known/api-catalog
+      status: 404
+  checked: '2026-08-30'

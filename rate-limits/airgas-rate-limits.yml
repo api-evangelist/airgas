@@ -4,91 +4,36 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Airgas
 providerId: airgas
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
-tags:
-  - Industrial Gases
-  - Welding
-  - Safety
-  - B2B
-  - Supply Chain
-  - Manufacturing
-  - Healthcare
-  - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the Airgas API surface. Captures per-tier quotas,
-  burst behavior, response signaling, and recovery semantics. Defaults are scaffold values to be replaced
-  with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
-responseCodes:
-  throttled: 429
-  quotaExceeded: 429
-  serviceUnavailable: 503
-limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - Airgas
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
-    timeFrame: month
-    applies:
-      - Airgas
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - Airgas
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - Airgas
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
-    scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
-    applies:
-      - Airgas
-policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+generated: '2026-08-30'
+modified: '2026-08-30'
+method: searched
+source: https://www.airgas.com/robots.txt
+limit_count: 0
+note: >-
+  REPLACES a fabricated scaffold. The 2026-05-04 bulk sweep wrote five invented API rate limits here
+  (10/min free, 100/min professional, 1000/min enterprise) and an invented X-RateLimit-* header set.
+  Airgas publishes no API and therefore no API rate limits, no throttling headers and no documented
+  429 semantics. limit_count is an honest zero. The only rate governance Airgas publishes anywhere is
+  a crawler directive in robots.txt, recorded below as crawl_policy — it governs web crawlers, NOT an
+  API, and must not be read as an API limit.
+headers: {}
+responseCodes: {}
+limits: []
+crawl_policy:
+  source: https://www.airgas.com/robots.txt
+  status: 200
+  request_rate: 1/5
+  visit_time: 0530-1900 UTC window declared as 1900-0530
+  note: >-
+    Non-standard legacy robots.txt directives (Request-rate, Visit-time). These constrain crawlers of
+    the www.airgas.com storefront. They are not an API rate limit and are recorded only so the zero
+    above is distinguishable from "not checked".
+evidence:
+  - url: https://www.airgas.com/robots.txt
+    status: 200
+  - url: https://www.airgas.com/openapi.json
+    status: 404
+    note: No contract exists in which rate-limit headers or a 429 response could be documented.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

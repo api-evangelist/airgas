@@ -1,0 +1,49 @@
+specification: API Commons Lifecycle
+specificationVersion: '0.1'
+provider: Airgas
+providerId: airgas
+generated: '2026-08-30'
+method: searched
+source: >-
+  Searched airgas.com (content sitemap, 1,167 URLs) and the web for an Airgas API versioning policy,
+  deprecation policy, SLA or status page. Probed the conventional hosts and paths directly.
+note: >-
+  Airgas publishes no API, and correspondingly no API lifecycle commitments of any kind. Recorded as
+  measured absence. No StatusPage or Deprecation pointer is wired into apis.yml because neither exists.
+versioning:
+  scheme: null
+  policy_url: null
+  note: No API version scheme is published because no API contract is published.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  deprecation_header: false
+  rfc8594: false
+  note: No deprecation or sunset policy published.
+sla:
+  published: false
+  url: null
+  note: >-
+    No API service-level agreement is published. Commercial supply SLAs, if any, sit inside customer
+    contracts negotiated through the eBusiness Solutions team.
+status_page:
+  published: false
+  url: null
+  evidence:
+    - url: https://www.airgas.com/status
+      status: 404
+    - host: status.airgas.com
+      status: NXDOMAIN
+deprecated_operations: []
+evidence:
+  - url: https://www.airgas.com/solutions/ebusiness-solutions
+    status: 200
+    note: The integration page names cXML/OCI/EDI protocols but carries no version or deprecation policy.
+  - url: https://www.airgas.com/sitemap.xml
+    status: 200
+    note: >-
+      Sitemap index resolved to a 1,167-URL content sitemap; no developer, api, status, changelog or
+      release-notes path appears in it.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

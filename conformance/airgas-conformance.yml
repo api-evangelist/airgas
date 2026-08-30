@@ -1,0 +1,133 @@
+specification: API Commons Conformance
+specificationVersion: '0.1'
+provider: Airgas
+providerId: airgas
+generated: '2026-08-30'
+method: searched
+source: https://www.airgas.com/solutions/ebusiness-solutions
+note: >-
+  Airgas publishes NO REST/OpenAPI, GraphQL, gRPC or SOAP contract on any host it controls
+  (see well-known/airgas-well-known.yml and x-coverage in apis.yml). Its documented machine-to-machine
+  integration surface is B2B procurement: cXML or OCI punchout, hosted catalogs, inbound order
+  integration and outbound confirmation / ASN / invoice documents over cXML or EDI. Every entry below
+  is graded on where the evidence actually lives — a DOCS CLAIM on the provider's own solutions page is
+  recorded as such and is NOT the same as a contract that declares the standard in machine-readable form.
+  Nothing here is inferred from the product category.
+surfaces:
+  openapi: none
+  graphql: none
+  grpc: none
+  wsdl: none
+  asyncapi: none
+  b2b_procurement: https://www.airgas.com/solutions/ebusiness-solutions
+conformance:
+  - id: cxml
+    name: cXML (Commerce eXtensible Markup Language)
+    category: domain-standard
+    conforms: true
+    evidence:
+      type: docs-claim
+      url: https://www.airgas.com/solutions/ebusiness-solutions
+      status: 200
+      quote: >-
+        "from shopping (cXML or OCI punchout and/or hosted catalogs) and inbound order integration to
+        outbound electronic confirmation, ASN and invoice documents, all using traditional cXML or EDI
+        protocols"
+      note: >-
+        Stated by Airgas on its own page. No cXML DTD version, PunchOutSetupRequest endpoint URL, or
+        supplier setup document is published — the technical detail is handed off to the eBusiness
+        Solutions team via a contact form.
+  - id: oci-punchout
+    name: SAP OCI (Open Catalog Interface) punchout
+    category: domain-standard
+    conforms: true
+    evidence:
+      type: docs-claim
+      url: https://www.airgas.com/solutions/ebusiness-solutions
+      status: 200
+      quote: '"cXML or OCI punchout and/or hosted catalogs"'
+      note: >-
+        Airgas SupplySync is named as the punchout site. No OCI field mapping or hook URL is published.
+  - id: x12-edi
+    name: ANSI ASC X12 EDI
+    category: domain-standard
+    conforms: true
+    evidence:
+      type: docs-claim + third-party-van-listing
+      url: https://www.airgas.com/solutions/ebusiness-solutions
+      status: 200
+      note: >-
+        Airgas names "traditional cXML or EDI protocols" for order, confirmation, ASN and invoice
+        documents but publishes no transaction-set list of its own. Third-party EDI VANs that onboard
+        Airgas trading partners list the sets — see transaction_sets below. Recorded as third-party
+        evidence, NOT as an Airgas publication.
+    transaction_sets:
+      source: https://www.infoconn.com/edi/partners/Airgas.htm
+      source_type: third-party
+      required:
+        - '810 - Invoice'
+        - '850 - Purchase Order'
+        - '997 - Functional Acknowledgement'
+      optional:
+        - '820 - Payment Order/Remittance Advice'
+        - '855 - Purchase Order Acknowledgment'
+        - '856 - Ship Notice/Manifest'
+        - '860 - Purchase Order Change Request'
+        - '864 - Text Message'
+      labeling:
+        - 'GS1-128 (UCC 128) shipping labels'
+  - id: openapi
+    name: OpenAPI
+    category: contract
+    conforms: false
+    evidence:
+      type: probe
+      url: https://www.airgas.com/openapi.json
+      status: 404
+      note: >-
+        /openapi.json, /swagger.json and /api-docs all return the Airgas 404 template on www.airgas.com;
+        no API host exists in DNS to probe instead.
+  - id: oauth2
+    name: OAuth 2.0
+    category: security
+    conforms: false
+    evidence:
+      type: probe
+      url: https://www.airgas.com/.well-known/oauth-authorization-server
+      status: 404
+      note: >-
+        www.airgas.com/login is a human web-session login for the e-commerce storefront. No authorization
+        server metadata, no documented OAuth flow, no developer credential issuance.
+  - id: oidc
+    name: OpenID Connect
+    category: security
+    conforms: false
+    evidence:
+      type: probe
+      url: https://www.airgas.com/.well-known/openid-configuration
+      status: 404
+  - id: rfc9457
+    name: RFC 9457 Problem Details for HTTP APIs
+    category: cross-cutting
+    conforms: false
+    evidence:
+      type: derived
+      note: No contract exists from which application/problem+json responses could be observed.
+  - id: rfc8594
+    name: RFC 8594 Sunset header / deprecation signaling
+    category: cross-cutting
+    conforms: false
+    evidence:
+      type: derived
+      note: No API and no published deprecation policy — see lifecycle/airgas-lifecycle.yml.
+compliance_certifications:
+  published: false
+  note: >-
+    No trust center, certification page, SOC 2 / ISO 27001 / HIPAA attestation listing or security
+    disclosure program was found on airgas.com. probe-security-programs.py returned vdp=none trust=none
+    on 2026-08-30, and /security, /status and /vulnerability-disclosure all return 404. Airgas does supply
+    medical-grade gases, so a certification posture may exist off the public web — absence of a published
+    page is what is recorded here, not absence of the underlying program.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
