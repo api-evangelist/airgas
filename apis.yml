@@ -137,7 +137,7 @@ tags:
 specificationVersion: '0.23'
 created: '2026-03-23'
 type: Index
-position: Consumer
+position: Consuming
 access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/airgas.png
 integrations:
