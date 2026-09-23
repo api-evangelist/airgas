@@ -1,7 +1,9 @@
 ---
 title: Air Liquide to Buy South Korea's DIG Airgas for $3 Billion
 url: https://www.wsj.com/business/deals/air-liquide-to-buy-south-koreas-dig-airgas-for-3-billion-65105308
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Airgas" press release artificial intelligence'
 position: 5
 source: serpapi-google

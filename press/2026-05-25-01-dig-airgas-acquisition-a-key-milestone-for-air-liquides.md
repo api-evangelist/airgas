@@ -1,7 +1,9 @@
 ---
 title: 'DIG Airgas acquisition: a key milestone for Air Liquide''s ...'
 url: https://www.airliquide.com/stories/industry/dig-airgas-acquisition-key-milestone-air-liquides-growth-asia
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Airgas" press release artificial intelligence'
 position: 1
 source: serpapi-google

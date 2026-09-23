@@ -1,7 +1,9 @@
 ---
 title: Air Liquide Inks $13.4B Deal For Industrial Gas Co. Airgas
 url: https://www.law360.com/mergersacquisitions/articles/728213/air-liquide-inks-13-4b-deal-for-industrial-gas-co-airgas
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Airgas" press release artificial intelligence'
 position: 4
 source: serpapi-google
