@@ -35,7 +35,6 @@ apis:
   - Safety
   - E-Commerce
   humanURL: https://www.airgas.com
-  baseURL: https://www.airgas.com
   description: Airgas provides industrial, medical, and specialty gases and related products. The Airgas online platform supports B2B ordering, account management, order tracking, digital proof of 
     delivery, and supply chain management for business customers.
   properties:
