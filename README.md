@@ -1,4 +1,4 @@
-# Airgas (airgas)
+# Airgas
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,107 +66,147 @@
 
 Airgas is a leading supplier of industrial, medical, and specialty gases as well as welding equipment, safety products, and MRO supplies. An Air Liquide company, Airgas serves aerospace, construction, food and beverage, healthcare, metal fabrication, and energy industries. Airgas provides B2B e-business solutions including online ordering, supply chain management, and digital proof-of-delivery capabilities.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/airgas/refs/heads/main/apis.yml)
+**Areas:** Fortune 500 · Industrial Gases · Welding · Safety · B2B · Supply Chain · Manufacturing · Healthcare
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Airgas on APIs.io
 
-## Tags:
+Everything profiled for Airgas is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/airgas/](https://apis.io/providers/airgas/)** — or go straight to one of the APIs or properties below.
 
- - Industrial Gases, Welding, Safety, B2B, Supply Chain, Manufacturing, Healthcare
+### APIs (1)
 
-## Timestamps
+- [Airgas](https://apis.io/apis/airgas/airgas/) — Airgas provides industrial, medical, and specialty gases and related products. The Airgas online platform supports B2B ordering, account management, order…
 
-- **Created:** 2026-03-23
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Airgas
-Airgas provides industrial, medical, and specialty gases and related products. The Airgas online platform supports B2B ordering, account management, order tracking, digital proof of delivery, and supply chain management for business customers.
+#### JSON Schema (3)
 
-**Human URL:** [https://www.airgas.com](https://www.airgas.com)
+The data models the API reads and writes.
 
-#### Tags:
+- [Account](https://apis.io/schemas/airgas/airgas-account/)
+- [Order](https://apis.io/schemas/airgas/airgas-order/)
+- [Product](https://apis.io/schemas/airgas/airgas-product/)
 
- - Industrial Gases, B2B, Supply Chain, Welding, Safety, E-Commerce
+#### JSON Structure (3)
 
-#### Properties
+Data models expressed in JSON Structure.
 
-- [Documentation](https://www.airgas.com)
-- [GettingStarted](https://www.airgas.com/solutions)
-- [Quickstart](https://www.airgas.com/order-and-shipping)
+- [Airgas Account Structure](https://apis.io/json-structure/airgas/airgas-account-structure/)
+- [Airgas Order Structure](https://apis.io/json-structure/airgas/airgas-order-structure/)
+- [Airgas Product Structure](https://apis.io/json-structure/airgas/airgas-product-structure/)
 
-## Common Properties
+#### JSON-LD (1)
 
-- [Portal](https://www.airgas.com)
-- [GettingStarted](https://www.airgas.com/solutions)
-- [Support](https://www.airgas.com/contact)
-- [Vocabulary](https://raw.githubusercontent.com/api-evangelist/airgas/refs/heads/main/vocabulary/airgas-vocabulary.yaml)
+Linked-data contexts for the provider's vocabulary.
 
-## Features
+- [Airgas Context](https://apis.io/jsonld/airgas/airgas-context/)
 
-| Name | Description |
-|------|-------------|
-| Online Ordering | B2B online ordering portal for industrial gases, welding, and safety products. |
-| Account Management | Customer account management with order history and invoicing. |
-| Mobile Reorder App | Mobile application for reordering supplies from previous orders. |
-| Supply Chain Solutions | Total gas management and supply chain optimization for industrial customers. |
-| Digital Proof of Delivery | Digital POD documents for order verification and record keeping. |
-| Total Gas Management | Comprehensive gas supply management for industrial and healthcare operations. |
-| Safety Product Line | Full line of safety equipment, PPE, and compliance products. |
+#### Vocabulary (1)
 
-## Use Cases
+The provider's domain terms, defined.
 
-| Name | Description |
-|------|-------------|
-| Industrial Gas Supply | Supply of oxygen, argon, nitrogen, acetylene, and specialty gases for manufacturing. |
-| Medical Gas Supply | Medical-grade oxygen, nitrous oxide, and specialty gases for healthcare facilities. |
-| Welding Operations | Welding gas blends, equipment, and consumables for fabrication shops. |
-| Food & Beverage | Food-grade CO2, nitrogen, and other gases for food processing and packaging. |
-| Aerospace | Specialty gases and gas management for aerospace manufacturing. |
-| Safety Compliance | PPE, fall protection, and safety equipment for workplace compliance. |
+- [Airgas Vocabulary](https://apis.io/vocabularies/airgas/airgas-vocabulary/)
 
-## Integrations
+#### Examples (3)
 
-| Name | Description |
-|------|-------------|
-| Air Liquide | Parent company providing global gas supply chain integration. |
-| E-Procurement Platforms | Integration with enterprise procurement systems for automated ordering. |
-| ERP Systems | Supply chain integration with ERP systems for order management. |
-| Healthcare Systems | Medical gas supply chain integration with hospital procurement systems. |
+Example requests and responses.
 
-## Artifacts
+- [Airgas Account Example](https://apis.io/examples/airgas/airgas-account-example/)
+- [Airgas Order Example](https://apis.io/examples/airgas/airgas-order-example/)
+- [Airgas Product Example](https://apis.io/examples/airgas/airgas-product-example/)
 
-Machine-readable data schemas for Airgas business entities.
+#### Governance rules (1)
 
-### JSON Schema
+Spectral rulesets for the provider's contracts.
 
-- [Product](json-schema/airgas-product-schema.json)
-- [Order](json-schema/airgas-order-schema.json)
-- [Account](json-schema/airgas-account-schema.json)
+- [Airgas — jsonschema rules](https://apis.io/rules/airgas/airgas-jsonschema-spectral-rules/)
 
-### JSON Structure
+#### Security (1)
 
-- [Product Structure](json-structure/airgas-product-structure.json)
-- [Order Structure](json-structure/airgas-order-structure.json)
-- [Account Structure](json-structure/airgas-account-structure.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### JSON-LD
+- [Airgas Domain Security](https://apis.io/security/airgas/airgas-domain-security/)
 
-- [Airgas Context](json-ld/airgas-context.jsonld)
+#### Plans and pricing (1)
 
-### Examples
+Published plans, tiers and prices.
 
-- [Product Example](examples/airgas-product-example.json)
-- [Order Example](examples/airgas-order-example.json)
-- [Account Example](examples/airgas-account-example.json)
+- [Airgas Plans Pricing](https://apis.io/plans/airgas/airgas-plans-pricing/)
 
-## Vocabulary
+#### Rate limits (1)
 
-- [Airgas Vocabulary](vocabulary/airgas-vocabulary.yaml) — Domain vocabulary mapping 5 resources, 6 actions, and 3 personas for Airgas B2B industrial gas supply operations
+Published request limits.
 
-## Maintainers
+- [Airgas Rate Limits](https://apis.io/rate-limits/airgas/airgas-rate-limits/)
 
-**FN:** Kin Lane
+#### FinOps (1)
 
-**Email:** kin@apievangelist.com
+What the API costs to run, by operation.
+
+- [Airgas Finops](https://apis.io/finops/airgas/airgas-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.airgas.com/)
+- [Documentation](https://www.airgas.com/resources)
+- [Getting started](https://www.airgas.com/solutions)
+- [Support](https://www.airgas.com/customer-service)
+- [Blog](https://www.airgas.com/airgas_newsroom)
+- [Terms of service](https://www.airgas.com/terms)
+- [Privacy policy](https://www.airgas.com/privacy)
+
+## API Evangelist rating
+
+**Kin Score 30.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 14.7 |
+| Contract governance | 41.7 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 34.2 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 14.8** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/airgas/](https://apis.io/providers/airgas/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Airgas: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/airgas/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
